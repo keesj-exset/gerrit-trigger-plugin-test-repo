@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+
 function tralala()
 {
     echo "That's it i quit"
