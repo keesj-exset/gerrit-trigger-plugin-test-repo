@@ -201,8 +201,10 @@ Configure the plugin by adding a server (select the few options to enable the ab
 .. image:: img/configure_plugin.png
 
 
-* Create a jew job 
-* gerrit_test_builder
-* FreeStyle project
-
+* Create a new job.
+ * New Item  
+   * (Name gerrit_test_builder)
+   * Freestyle project
+ * Source code management
+    
 
