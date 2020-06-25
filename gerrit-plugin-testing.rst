@@ -201,26 +201,27 @@ Configure the plugin by adding a server (select the few options to enable the ab
 .. image:: img/configure_plugin.png
 
 
+.. code-block:: 
 
-* Create a new job.
- * New Item  
-   * (Name gerrit_test_builder)
-   * Freestyle project
- * Source code management 
-  * git
-  * repository URL ssh://jenkins@10.0.3.1:29418/gerrit_test
-    * Advanced Refspec  $GERRIT_REFSPEC  (also documented here https://plugins.jenkins.io/gerrit-trigger/ )
-  * Additional behaviours " Strategy for choosing what to build " -> Gerrit Trigger
-  * Add "Change merged" as event (also documented here https://plugins.jenkins.io/gerrit-trigger/ )
-* Build Triggers
-  * gerrit event
-  * Select "gerrit" as server 
-  * In gerrit project select gerrit_test
-  * In pattern enter "path" **
-* Build
-  * Add additional steps
-  * execute shell script
-  * ./build.sh.
+    * Create a new job.
+     * New Item  
+      * (Name gerrit_test_builder)
+      *   Freestyle project
+     * Source code management 
+      * git
+      * repository URL ssh://jenkins@10.0.3.1:29418/gerrit_test
+        * Advanced Refspec  $GERRIT_REFSPEC  (also documented here https://plugins.jenkins.io/gerrit-trigger/ )
+      * Additional behaviours " Strategy for choosing what to build " -> Gerrit Trigger
+      * Add "Change merged" as event (also documented here https://plugins.jenkins.io/gerrit-trigger/ )
+    * Build Triggers
+      * gerrit event
+      * Select "gerrit" as server 
+      * In gerrit project select gerrit_test
+      * In pattern enter "path" **
+    * Build
+      * Add additional steps
+      * execute shell script
+      * ./build.sh.
 
 Test by running build now
 
