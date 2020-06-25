@@ -91,6 +91,7 @@ Create a jenkins user on the gerrit server
 
 .. code-block:: sh
 
+    . env.sh
     ssh -p 29418 admin@$IP gerrit create-account jenkins
 
 
@@ -141,7 +142,7 @@ Following the `Gerrit trigger official documentation <https://plugins.jenkins.io
 
 .. code-block:: sh
 
-        Admin > Projects > …​ > Access > Edit
+        Admin > Projects > Browse > Repositories > All-Projects > Access > Edit
             Reference: refs/*
                 Read: ALLOW for Non-Interactive Users
             Reference: refs/heads/*
