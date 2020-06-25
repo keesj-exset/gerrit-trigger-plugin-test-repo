@@ -1,4 +1,9 @@
 #!/bin/sh
+#
+# Rework a commit (as to create a new patchset with the same commit id
+# For gerrit/jenkins this can mean aborting the current job to start a new
+# one to build the latested release
+#
 if [ ! -f magic ]
 then
     echo keesj > magic

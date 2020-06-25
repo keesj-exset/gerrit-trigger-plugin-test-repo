@@ -20,7 +20,7 @@ create env.sh
 
     export IP=10.0.3.1
 
-Run gerrit with persitance
+Run gerrit in persistance mode
 
 .. code-block:: sh
 
@@ -35,7 +35,7 @@ Run gerrit with persitance
         gerritcodereview/gerrit
 
 
-Run jenkins with persitance
+Run jenkins with persistance
 
 .. code-block:: sh
 
@@ -43,9 +43,9 @@ Run jenkins with persitance
     docker run -it --rm -p $IP:8090:8080 -v jenkins_home:/var/jenkins_home jenkins/jenkins
 
 
+Configure gerrit. 
 
-Configure gerrit
-
+By default gerrit no longer has the verified label hence we need to modify the configuration.
 
 go to http://10.0.3.1:8080/
 
@@ -86,14 +86,14 @@ Push back the changes
     git commit -m "Adding a verified label"
     git push origin HEAD:meta/config
 
-Create a jenkins user
+Create a jenkins user on the gerrit server
 
 .. code-block:: sh
 
     ssh -p 29418 admin@$IP gerrit create-account jenkins
 
 
-Create an ssh key
+Create an ssh key for the jenkins user on the jenkins server
 
 .. code-block:: sh
 
@@ -103,7 +103,7 @@ Create an ssh key
         cd
         ssh-keygen
 
-Upload it to gerrit
+An upload the ssh key to gerrit to allow jenkins to perform operations on gerrit (label verified)
 
 .. code-block:: sh
 

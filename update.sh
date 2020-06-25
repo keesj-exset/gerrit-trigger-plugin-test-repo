@@ -1,4 +1,9 @@
 #!/bin/sh
+#
+# Create a new commit, In jenkins / gerrit terms
+# This means creating a new job to build and hence
+# can create a queue of build to build
+#
 if [ ! -f magic ]
 then
     echo keesj > magic
