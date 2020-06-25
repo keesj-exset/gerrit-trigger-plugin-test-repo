@@ -205,6 +205,17 @@ Configure the plugin by adding a server (select the few options to enable the ab
  * New Item  
    * (Name gerrit_test_builder)
    * Freestyle project
- * Source code management
+ * Source code management 
+  * git
+  * repository URL ssh://jenkins@10.0.3.1:29418/gerrit_test
+  * Additional behaviours " Strategy for choosing what to build " -> Gerrit Trigger
+* Build Triggers
+  * gerrit event
+  * Select "gerrit" as server 
+* Build
+  * Add additional steps
+  * execute shell script
+  * ./build.sh.
+  
     
 
