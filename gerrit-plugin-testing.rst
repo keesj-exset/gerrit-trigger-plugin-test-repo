@@ -175,7 +175,7 @@ Upload the test repo
 
 Setup jenkins
 
-open to http://10.0.3.1:8080/
+open to http://10.0.3.1:8090/
 
 .. code-block:: sh
 
