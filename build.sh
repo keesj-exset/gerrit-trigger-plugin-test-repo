@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#
+# emulate a longer build to test canceling jobs
+#
 function tralala()
 {
     echo "That's it i quit"
