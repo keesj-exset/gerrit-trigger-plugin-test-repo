@@ -44,6 +44,7 @@ Run jenkins with persistance
 
 
 Configure gerrit. 
+=================
 
 By default gerrit no longer has the verified label hence we need to modify the configuration.
 
@@ -160,12 +161,14 @@ Upload the test repo
 
 .. code-block:: sh
 
+        git clone https://github.com/keesj-exset/gerrit-trigger-plugin-test-repo.git gerrit_test
         . env.sh
-        cd repo
+        cd gerrit_test
         git remote rm origin
         git remote add origin ssh://admin@$IP:29418/gerrit_test
         git push origin master
 
+        # add the gerrit commit hook (to add commit-id to commits)
         gitdir=$(git rev-parse --git-dir); scp -p -P 29418 admin@$IP:hooks/commit-msg ${gitdir}/hooks/
 
 
@@ -197,11 +200,8 @@ Configure the plugin by adding a server (select the few options to enable the ab
 .. image:: img/configure_plugin.png
 
 
+* Create a jew job 
+* gerrit_test_builder
+* FreeStyle project
 
-Create a jew job 
-gerrit_test_builder
-FreeStyle project
 
-
-Jenkins plugin setup
-********************
