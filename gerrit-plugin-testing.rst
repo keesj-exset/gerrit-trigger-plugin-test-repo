@@ -235,5 +235,6 @@ run ./update.sh again but now wait for 15 seconds and then run ./rework.sh
 The expected result is that the job shows that the build was aborted but the the build verified is not set to -1.
 
 
+.. image:: img/expected.png
     
 
