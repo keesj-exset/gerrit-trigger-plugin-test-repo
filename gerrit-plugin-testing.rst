@@ -226,8 +226,14 @@ Configure the plugin by adding a server (select the few options to enable the ab
 Test by running build now
 
 Testing:
+
 cd gerrit_test
- ./update.sh 
+run ./update.sh . this should trigger jenkins  let it run and look into gerrit that the build was verified (+1)
+
+run ./update.sh again but now wait for 15 seconds and then run ./rework.sh 
+
+The expected result is that the job shows that the build was aborted but the the build verified is not set to -1.
+
 
     
 
